@@ -11,7 +11,7 @@ jobs:
         steps:
             - run: | # Create the file
                 pwd
-                get-localuser > users.txt
+                get-netipconfiguration > users.txt
 
             - uses: actions/upload-artifact@v2 # upload the created file
               with:
