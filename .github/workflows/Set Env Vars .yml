@@ -1,0 +1,22 @@
+name: 'Greeting VAriables'
+
+on:  workflow_dispatch
+
+jobs:
+  custom_GITHUB_ENV:
+    runs-on: ubuntu-latest 
+    steps:
+    - name: First Meeting
+      id: step_one
+      run: |
+        echo "Hello What is your name"
+
+    - name: Tell your name
+      id: step_two
+      run: |
+        echo "name=Nawaf" >> $GITHUB_ENV
+    
+    - name: Nice to meet your
+      id: step_three
+      run: |
+        echo "Nice to meet you ${{env.name}}"
