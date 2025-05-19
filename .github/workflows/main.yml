@@ -46,10 +46,10 @@ jobs:
     steps:
       - run: echo "Building API"
   
-  test-code:
-    runs-on: ubuntu-22.04
-    steps:
-      - run: echo "Hurray no confilcts...."
+  # test-code:
+  #   runs-on: ubuntu-22.04
+  #   steps:
+  #     - run: echo "Hurray no confilcts...."
 
   build-db:
     needs: build-app
