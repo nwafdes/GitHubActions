@@ -8,9 +8,6 @@ jobs:
         runs-on: windows-latest
         steps:
             - run: env
-    ubuntu-environement-variables:
-        runs-on: ubuntu
-        steps:
-            - run: env
             - run: |
                 get-netipconfiguration
+
