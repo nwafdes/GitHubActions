@@ -19,4 +19,4 @@ jobs:
     - name: Nice to meet your
       id: step_three
       run: |
-        echo "Nice to meet you ${{env.name}}"
+        echo "Nice to meet you $env.name"
