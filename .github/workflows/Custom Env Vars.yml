@@ -20,9 +20,6 @@ jobs:
     steps:
     - name: print-values-of-env-vars
       run: |
-        echo "$Greeting $First_Name. Today is $Day!"
+        echo "$Greeting $First_name. Today is $Day!"
         echo "testvar  $testvar"
         echo "testvar  ${{ env.testvar }}"
-      env:
-        First_name: "Nawaf"
-        testvar: "Value-3"
