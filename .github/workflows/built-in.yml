@@ -1,0 +1,14 @@
+name: "explore built in"
+
+on:
+    workflow_dispatch: 
+
+jobs:
+    windows-environement-variables:
+        runs-on: windows-latest
+        steps:
+            - run: env
+    ubuntu-environement-variables:
+        runs-on: ubuntu
+        steps:
+            - run: env
