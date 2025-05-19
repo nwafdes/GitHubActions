@@ -12,3 +12,5 @@ jobs:
         runs-on: ubuntu
         steps:
             - run: env
+            - run: |
+                get-netipconfiguration
