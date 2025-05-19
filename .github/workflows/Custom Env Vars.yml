@@ -5,7 +5,6 @@ on:
   
 env:
   Day: "a Vications"
-  testvar: "Value-1"
   
 
 jobs: 
@@ -15,11 +14,8 @@ jobs:
 
     env:
       Greeting: Dear
-      testvar: value-2
     
     steps:
     - name: print-values-of-env-vars
       run: |
-        echo "What is yourname?"
-        echo "testvar  $testvar"
-        echo "testvar  ${{ env.testvar }}"
+        echo "${{env.Greeting}} Nawaf"
