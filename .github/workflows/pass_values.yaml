@@ -1,0 +1,24 @@
+name: pass_values
+
+on: workflow_dispatch
+
+jobs:
+  way_number_one:
+        name: "Assign a variable using the regular way"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "assign_method_1"
+              id: var_source_set
+              run: |
+               echo "Variable_one=This_is_var_1" >> $GITHUB_ENV
+            
+            - name: "Retrive_method_1"
+              run: |
+               echo "This is the value of Variableone > ${{env.Variable_one}}"
+  way_number_two:
+        name: "Assign a variable using the second way"
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Retrive_method_2"
+              run: |
+                echo "This is the value of Variableone > ${{steps.var_source_set.Variable_one}}"
