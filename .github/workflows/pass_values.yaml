@@ -15,6 +15,7 @@ jobs:
             - name: "Retrive_method_1"
               run: |
                echo "This is the value of Variableone > ${{env.Variable_one}}"
+               echo "This is the value of Variableone_using second method" > ${{steps.var_source_set.Variable_one}}
   way_number_two:
         name: "Assign a variable using the second way"
         runs-on: ubuntu-latest
