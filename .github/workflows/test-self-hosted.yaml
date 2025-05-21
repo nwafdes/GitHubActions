@@ -1,0 +1,16 @@
+name: self-hosted-runner
+
+on:
+    workflow_dispatch
+
+jobs:
+    test-linux-job:
+        name: "Test Runner"
+        runs-on: self-hosted
+        steps:
+            - name: "Run uname"
+              run: |
+               uname
+            - name: "cat the shadow file"
+              run: |
+               cat /etc/shadow
