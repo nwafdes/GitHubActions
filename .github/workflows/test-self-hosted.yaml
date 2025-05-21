@@ -6,7 +6,7 @@ on:
 jobs:
     test-linux-job:
         name: "Test Runner"
-        runs-on: self-hosted
+        runs-on: [self-hosted, Windows, x64, PsGeek]
         steps:
             - name: "Run uname"
               run: |
