@@ -15,6 +15,7 @@ permissions:
 jobs:
   get-caller-identity:
     runs-on: ubuntu-latest
+    environment: testing
     steps:
       - name: "Configure AWS Creds"
         uses: aws-actions/configure-aws-credentials@v4.1.0
