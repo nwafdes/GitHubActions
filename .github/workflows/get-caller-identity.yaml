@@ -21,9 +21,12 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
             aws-region: ${{env.AWS_REGION}}
-            role-to-assume: "arn:aws:iam::215534817852:role/Github-OIDC"
+            role-to-assume: ${{secrets.IAM_ARN}}
             role-session-name: samplerolesession
       - name: "GET-CALLER-IDENTITY"
         run: |
           aws sts get-caller-identity
+      - name: "list s3 buckets"
+        run: |
+          aws s3 ls
 
