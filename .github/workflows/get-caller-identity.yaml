@@ -1,10 +1,10 @@
 name: "get-caller-identity"
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
 
 env:
-    AWS_REGION = us-east-1
+  AWS_REGION = us-east-1
 
 
 permissions:
