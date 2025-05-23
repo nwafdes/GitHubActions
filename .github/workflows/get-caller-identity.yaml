@@ -1,4 +1,4 @@
-name: "TEST JWT"
+name: "get-caller-identity"
 
 on:
     workflow_dispatch:
